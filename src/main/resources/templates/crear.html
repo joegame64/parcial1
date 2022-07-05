@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="text-align: center;background-color: #000;color:#fff;">
+        <h1 style="text-decoration: underline;">Crear Nueva Funcion</h1>
+        <div class="container">
+
+            <form  th:object ="${peliculas}" th:action = "@{/save}" method="POST">
+
+                <input type="hidden" th:field="*{id}">
+                
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputpelicula" class="col-form-label">Pelicula</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text"th:field="*{pelicula}" id="inputPelicula" class="form-control" aria-describedby="peliculaHelpInline">
+                    </div>
+                </div><br>
+                
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputentrada" class="col-form-label">Entrada</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="number"th:field="*{entrada}" id="inputEntrada" class="form-control" aria-describedby="entradaHelpInline">
+                    </div>
+                </div><br>
+                
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputfecha" class="col-form-label">Fecha</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text"th:field="*{fecha}" id="inputFecha" class="form-control" aria-describedby="fechaHelpInline">
+                    </div>
+                </div><br>
+   
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputcapacidad" class="col-form-label">Capacidad</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="number"th:field="*{capacidad}" id="inputCapacidad" class="form-control" aria-describedby="capacidadHelpInline">
+                    </div>
+                </div><br>
+
+
+                <div class="mb-7">
+
+                    <label class="form-label" for="salas">Sala</label>
+
+                    <div class="col-sm-10">
+                        <select th:field="*{salas}" class="form-select" aria-label="Default select example">
+                            <option th:each="x:${salas}"
+                                    th:value="${x.id}"
+                                    th:text="${x.salas}"/>
+                        </select>
+                    </div>
+                </div><br>
+                <button type="submit" class="btn btn-primary" style="background-color: #1663BE; font-weight: 700; border-radius: 5px;padding: 5px 65px;cursor: pointer;">Crear</button>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
