@@ -1,0 +1,24 @@
+header{
+    width: 100%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+h1   {color: blue;}
+
+li {
+  float: right;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color:red;
+ color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

@@ -5,16 +5,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.1</version>
+		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cine</groupId>
 	<artifactId>cine</artifactId>
 	<version>1</version>
 	<name>cine</name>
-	<description>Examen Cine</description>
+	<description>Prueba1</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>19</java.version>
 		<repackage.classifier/>
 		<spring-native.version>0.12.0</spring-native.version>
 	</properties>
@@ -66,7 +66,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.25</version>
+            <version>8.0.31</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
